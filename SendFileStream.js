@@ -8,10 +8,10 @@ const app = express();
 app.use(cors());
 
 app.get('/download', (req, res) => {
-    const filePath = path.resolve(__dirname, 'Products.db');
+    const filePath = path.resolve(__dirname, 'Qrcodes.db');
     const stat = fs.statSync(filePath);
 
-    res.setHeader('Content-Disposition', 'attachment; filename=Products.db');
+    res.setHeader('Content-Disposition', 'attachment; filename=Qrcodes.db');
     res.setHeader('Content-Type', 'application/octet-stream');
     res.setHeader('Content-Length', stat.size);
 
